@@ -31,9 +31,9 @@ const Hero = () => {
       />
 
       <div className="relative z-10 section-container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-center lg:text-left">
             {/* Status badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -109,7 +109,7 @@ const Hero = () => {
           </div>
 
           {/* Right side - Portrait */}
-          <div className="flex items-center justify-center order-1 lg:order-2 animate-fade-in animation-delay-200">
+          <div className="flex items-center justify-center animate-fade-in animation-delay-200">
             <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl h-[50vh] flex items-center justify-center">
               <img
                 src={bassamPortrait}
