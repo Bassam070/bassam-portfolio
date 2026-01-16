@@ -1,9 +1,9 @@
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Inter Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* Design System - Dark Mode Engineering Portfolio */
 @layer base {
@@ -52,9 +52,7 @@
   .dark {
     /* Already dark mode by default */
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }

@@ -91,7 +91,7 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-3 md:py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 activeFilter === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80"
@@ -104,7 +104,7 @@ const Projects = () => {
 
         {/* Projects grid */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           variants={{
             hidden: {},
             visible: { transition: { staggerChildren: 0.08 } },
@@ -113,23 +113,21 @@ const Projects = () => {
           {projects.map((project) => {
             const isVisible =
               visibleProjectIds === null || visibleProjectIds.has(project.id);
+            if (!isVisible) return null;
             return (
             <motion.div
               key={project.id}
-              className={`glass-card p-6 flex flex-col cursor-pointer group transition-opacity duration-200 ${
-                isVisible ? "opacity-100" : "hidden"
-              }`}
+              className="glass-card p-6 flex flex-col cursor-pointer group transition-opacity duration-200 opacity-100"
               onClick={() => setSelectedProject(project)}
               variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
               whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 160, damping: 18 }}
-              aria-hidden={!isVisible}
             >
               <div className="mb-4 overflow-hidden rounded-xl border border-border bg-secondary/30">
                 <img
                   src={projectImages[project.id]}
                   alt={`${project.title} preview`}
-                  className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  className="h-32 md:h-40 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
               </div>
