@@ -6,7 +6,7 @@ export const personalInfo = {
   subtitle: "Building the Future of Power Systems & Embedded Solutions",
   email: "bmahdi.eng@gmail.com",
   phone: "+1 (819) 230-9076",
-  linkedin: "https://linkedin.com/in/Bassam-Mahdi",
+  linkedin: "https://www.linkedin.com/in/bassam-m-317985160",
   github: "https://github.com/Bassam070",
   location: "Ottawa, ON",
   bio: `I'm an Electrical Engineering graduate from the University of Ottawa with a passion for power systems, control systems, and embedded technologies. My experience spans from designing autonomous vehicle circuits to developing SCADA simulations and renewable energy models. I thrive on solving complex engineering challenges and delivering measurable results.`,
