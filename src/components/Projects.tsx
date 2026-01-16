@@ -49,10 +49,10 @@ const Projects = () => {
     });
   }, []);
 
-  const visibleProjectIds = useMemo(() => {
-    if (activeFilter === "All") return null;
-    return new Set(projects.filter((p) => p.category === activeFilter).map((p) => p.id));
-  }, [activeFilter]);
+  // Calculate visible project IDs based on active filter
+  const visibleProjectIds = activeFilter === "All" 
+    ? null 
+    : new Set(projects.filter((p) => p.category === activeFilter).map((p) => p.id));
 
   return (
     <motion.section
@@ -104,6 +104,7 @@ const Projects = () => {
 
         {/* Projects grid */}
         <motion.div
+          key={activeFilter} // Force re-render when filter changes
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           variants={{
             hidden: {},
