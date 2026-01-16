@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Design System - Dark Mode Engineering Portfolio */
+@layer base {
+  :root {
+    /* Dark Mode Only - Engineering Professional */
+    --background: 220 20% 4%;
+    --foreground: 220 13% 91%;
+
+    --card: 220 20% 7%;
+    --card-foreground: 220 13% 91%;
+
+    --popover: 220 20% 7%;
+    --popover-foreground: 220 13% 91%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 220 20% 4%;
+
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 220 13% 91%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 220 20% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 13% 91%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --glow-primary: 0 0 40px hsl(199 89% 48% / 0.3);
+    --glow-primary-subtle: 0 0 20px hsl(199 89% 48% / 0.15);
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(210 100% 50%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 20% 5%));
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(199 89% 48% / 0.15), transparent);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+    --shadow-card-hover: 0 8px 32px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(199 89% 48% / 0.2);
+  }
+
+  .dark {
+    /* Already dark mode by default */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Focus states for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border rounded-xl;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply border-primary/20;
+    transform: translateY(-2px);
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-primary-subtle {
+    box-shadow: var(--glow-primary-subtle);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  /* Section Title */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-foreground mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-lg max-w-2xl;
+  }
+
+  /* Skill Chip */
+  .skill-chip {
+    @apply px-3 py-1.5 bg-secondary text-secondary-foreground rounded-lg text-sm font-medium;
+    @apply border border-border hover:border-primary/30 transition-all duration-200;
+  }
+
+  /* Timeline */
+  .timeline-line {
+    @apply absolute left-0 md:left-1/2 w-px bg-border h-full transform md:-translate-x-1/2;
+  }
+
+  .timeline-dot {
+    @apply w-3 h-3 bg-primary rounded-full absolute left-0 md:left-1/2 transform md:-translate-x-1/2;
+    box-shadow: var(--glow-primary-subtle);
+  }
+
+  /* Animated reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+}
