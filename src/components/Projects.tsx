@@ -110,74 +110,73 @@ const Projects = () => {
             visible: { transition: { staggerChildren: 0.08 } },
           }}
         >
-          {projects.map((project) => {
-            const isVisible =
-              visibleProjectIds === null || visibleProjectIds.has(project.id);
-            if (!isVisible) return null;
-            return (
-            <motion.div
-              key={project.id}
-              className="glass-card p-6 flex flex-col cursor-pointer group transition-opacity duration-200 opacity-100"
-              onClick={() => setSelectedProject(project)}
-              variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 160, damping: 18 }}
-            >
-              <div className="mb-4 overflow-hidden rounded-xl border border-border bg-secondary/30">
-                <img
-                  src={projectImages[project.id]}
-                  alt={`${project.title} preview`}
-                  className="h-32 md:h-40 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                  loading="lazy"
-                />
-              </div>
+          {projects
+            .filter((project) => 
+              visibleProjectIds === null || visibleProjectIds.has(project.id)
+            )
+            .map((project) => (
+              <motion.div
+                key={project.id}
+                className="glass-card p-6 flex flex-col cursor-pointer group transition-opacity duration-200 opacity-100"
+                onClick={() => setSelectedProject(project)}
+                variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 160, damping: 18 }}
+              >
+                <div className="mb-4 overflow-hidden rounded-xl border border-border bg-secondary/30">
+                  <img
+                    src={projectImages[project.id]}
+                    alt={`${project.title} preview`}
+                    className="h-32 md:h-40 w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
 
-              {/* Category badge */}
-              <div className="mb-4">
-                <span
-                  className={`inline-flex px-3 py-1 rounded-full text-xs font-medium border ${
-                    categoryColors[project.category]
-                  }`}
-                >
-                  {project.category}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {project.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-muted-foreground mb-4 flex-grow line-clamp-3">
-                {project.description}
-              </p>
-
-              {/* Tools */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tools.slice(0, 3).map((tool) => (
+                {/* Category badge */}
+                <div className="mb-4">
                   <span
-                    key={tool}
-                    className="px-2 py-1 bg-background text-xs text-muted-foreground rounded"
+                    className={`inline-flex px-3 py-1 rounded-full text-xs font-medium border ${
+                      categoryColors[project.category]
+                    }`}
                   >
-                    {tool}
+                    {project.category}
                   </span>
-                ))}
-                {project.tools.length > 3 && (
-                  <span className="px-2 py-1 text-xs text-muted-foreground">
-                    +{project.tools.length - 3}
-                  </span>
-                )}
-              </div>
+                </div>
 
-              {/* Outcome */}
-              <div className="flex items-center gap-2 text-sm text-primary">
-                <span className="font-medium">{project.outcome}</span>
-                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </motion.div>
-            );
-          })}
+                {/* Title */}
+                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground mb-4 flex-grow line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Tools */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tools.slice(0, 3).map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2 py-1 bg-background text-xs text-muted-foreground rounded"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                  {project.tools.length > 3 && (
+                    <span className="px-2 py-1 text-xs text-muted-foreground">
+                      +{project.tools.length - 3}
+                    </span>
+                  )}
+                </div>
+
+                {/* Outcome */}
+                <div className="flex items-center gap-2 text-sm text-primary">
+                  <span className="font-medium">{project.outcome}</span>
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </motion.div>
+            ))}
         </motion.div>
 
         {/* Project Detail Modal */}
