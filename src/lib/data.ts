@@ -29,9 +29,7 @@ export const experiences = [
       "Led the electrical and controls design for a solar-powered thermal energy storage (TES) capstone system using phase change materials (PCM) to improve energy efficiency and reliability",
       "Developed the system architecture for sensing, control, and power delivery (sensors, control logic, wiring, protection), ensuring safe operation and clear subsystem interfaces",
       "Modeled system behavior and validated design choices through simulations and calculations, supporting component sizing and expected performance under varying operating conditions",
-      "Designed and integrated the control strategy for charging/discharging cycles, including temperature monitoring and safety thresholds to protect components and users",
-      "Produced technical documentation (block diagrams, wiring/IO lists, testing plan, and risk/safety notes) and communicated progress in design reviews and presentations",
-      "Coordinated with teammates across mechanical/thermal design to align electrical requirements with the physical build and testing constraints",
+      
     ],
     type: "engineering",
   },

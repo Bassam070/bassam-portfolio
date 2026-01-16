@@ -40,7 +40,7 @@ const Experience = () => {
               key={exp.id}
               className={`relative flex flex-col md:flex-row gap-8 ${index === experiences.length - 1 ? '' : 'mb-12'} ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } ${index === experiences.length - 1 ? 'border-2 border-red-500' : ''}`}
+              }`}
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             >
               {/* Timeline dot */}
