@@ -1,5 +1,8 @@
 import { ArrowDown, Mail, Linkedin, Github } from "lucide-react";
+<<<<<<< HEAD
 import { motion } from "framer-motion";
+=======
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 import { Button } from "@/components/ui/button";
 import { personalInfo } from "@/lib/data";
 import bassamPortrait from "@/assets/bassam-portrait.webp";
@@ -13,6 +16,7 @@ const Hero = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
+<<<<<<< HEAD
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,6 +42,12 @@ const Hero = () => {
       initial="hidden"
       animate="visible"
       variants={container}
+=======
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
     >
       {/* Background gradient effect */}
       <div className="absolute inset-0 hero-gradient" />
@@ -53,6 +63,7 @@ const Hero = () => {
       />
 
       <div className="relative z-10 section-container">
+<<<<<<< HEAD
         <motion.div
           className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
           variants={container}
@@ -64,10 +75,18 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in"
               variants={fadeUp}
             >
+=======
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left side - Text content */}
+          <div className="text-center lg:text-left">
+            {/* Status badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 animate-fade-in">
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="text-sm text-muted-foreground">
                 Open to Opportunities
               </span>
+<<<<<<< HEAD
             </motion.div>
 
             {/* Main heading */}
@@ -100,6 +119,28 @@ const Hero = () => {
               className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mb-12 animate-fade-in animation-delay-400"
               variants={fadeUp}
             >
+=======
+            </div>
+
+            {/* Main heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 animate-fade-in animation-delay-100">
+              {personalInfo.name}
+            </h1>
+
+            {/* Title with gradient */}
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-semibold gradient-text mb-6 animate-fade-in animation-delay-200">
+              {personalInfo.title}
+            </p>
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl lg:text-lg xl:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-10 animate-fade-in animation-delay-300">
+              Specializing in power systems, control systems, and embedded technologies.
+              Turning complex engineering challenges into measurable solutions.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mb-12 animate-fade-in animation-delay-400">
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
               <Button
                 size="lg"
                 onClick={scrollToProjects}
@@ -116,6 +157,7 @@ const Hero = () => {
               >
                 Get in Touch
               </Button>
+<<<<<<< HEAD
             </motion.div>
 
             {/* Social links */}
@@ -123,6 +165,12 @@ const Hero = () => {
               className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-500"
               variants={fadeUp}
             >
+=======
+            </div>
+
+            {/* Social links */}
+            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-500">
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="p-3 rounded-lg bg-secondary text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-all"
@@ -148,6 +196,7 @@ const Hero = () => {
               >
                 <Github className="w-5 h-5" />
               </a>
+<<<<<<< HEAD
             </motion.div>
           </motion.div>
 
@@ -178,6 +227,29 @@ const Hero = () => {
         <ArrowDown className="w-6 h-6 text-muted-foreground" />
       </motion.div>
     </motion.section>
+=======
+            </div>
+          </div>
+
+          {/* Right side - Portrait */}
+          <div className="flex items-center justify-center animate-fade-in animation-delay-200">
+            <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl h-[50vh] flex items-center justify-center">
+              <img
+                src={bassamPortrait}
+                alt="Bassam Mahdi - Electrical Engineering Graduate"
+                className="w-auto h-full max-h-[50vh] object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="w-6 h-6 text-muted-foreground" />
+      </div>
+    </section>
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
   );
 };
 

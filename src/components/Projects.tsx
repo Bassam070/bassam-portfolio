@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from "react";
 import { ExternalLink, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+=======
+import { useState } from "react";
+import { ExternalLink, ChevronRight } from "lucide-react";
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 import { projects, ProjectCategory } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,6 +31,7 @@ const categoryColors: Record<ProjectCategory, string> = {
   "Design/CAD": "bg-purple-500/10 text-purple-500 border-purple-500/20",
 };
 
+<<<<<<< HEAD
 const projectImages: Record<number, string> = {
   1: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80",
   2: "https://images.unsplash.com/photo-1509390221805-d1c887a72a00?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -38,10 +44,13 @@ const projectImages: Record<number, string> = {
   9: "https://plus.unsplash.com/premium_photo-1661946559786-fcfd73b340b1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
 
+=======
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<"All" | ProjectCategory>("All");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
+<<<<<<< HEAD
   useEffect(() => {
     Object.values(projectImages).forEach((src) => {
       const img = new Image();
@@ -75,11 +84,24 @@ const Projects = () => {
           className="text-center mb-12"
           variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}
         >
+=======
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
+
+  return (
+    <section id="projects" className="relative bg-secondary/30">
+      <div className="section-container">
+        {/* Section header */}
+        <div className="text-center mb-12">
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle mx-auto">
             A selection of engineering projects demonstrating expertise in power systems,
             embedded development, and automation
           </p>
+<<<<<<< HEAD
         </motion.div>
 
         {/* Filter tabs */}
@@ -87,6 +109,12 @@ const Projects = () => {
           className="flex flex-wrap justify-center gap-2 mb-12"
           variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}
         >
+=======
+        </div>
+
+        {/* Filter tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
           {categories.map((category) => (
             <button
               key={category}
@@ -100,6 +128,7 @@ const Projects = () => {
               {category}
             </button>
           ))}
+<<<<<<< HEAD
         </motion.div>
 
         {/* Projects grid */}
@@ -134,6 +163,18 @@ const Projects = () => {
                 />
               </div>
 
+=======
+        </div>
+
+        {/* Projects grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="glass-card p-6 flex flex-col cursor-pointer group"
+              onClick={() => setSelectedProject(project)}
+            >
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
               {/* Category badge */}
               <div className="mb-4">
                 <span
@@ -177,10 +218,16 @@ const Projects = () => {
                 <span className="font-medium">{project.outcome}</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
+<<<<<<< HEAD
             </motion.div>
             );
           })}
         </motion.div>
+=======
+            </div>
+          ))}
+        </div>
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 
         {/* Project Detail Modal */}
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
@@ -294,7 +341,11 @@ const Projects = () => {
           </DialogContent>
         </Dialog>
       </div>
+<<<<<<< HEAD
     </motion.section>
+=======
+    </section>
+>>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
   );
 };
 
