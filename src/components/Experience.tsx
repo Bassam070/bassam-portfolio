@@ -31,14 +31,14 @@ const Experience = () => {
         </motion.div>
 
         {/* Timeline */}
-        <motion.div className="relative max-w-3xl mx-auto">
+        <motion.div className="relative max-w-3xl mx-auto pb-12">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
 
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
-              className={`relative flex flex-col md:flex-row gap-8 mb-12 ${
+              className={`relative flex flex-col md:flex-row gap-8 ${index === experiences.length - 1 ? '' : 'mb-12'} ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } ${index === experiences.length - 1 ? 'border-2 border-red-500' : ''}`}
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
