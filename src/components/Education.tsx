@@ -1,13 +1,9 @@
 import { GraduationCap, BookOpen, Award } from "lucide-react";
-<<<<<<< HEAD
 import { motion } from "framer-motion";
-=======
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 import { education, awards } from "@/lib/data";
 
 const Education = () => {
   return (
-<<<<<<< HEAD
     <motion.section
       id="education"
       className="relative"
@@ -28,17 +24,10 @@ const Education = () => {
           className="text-center mb-16"
           variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}
         >
-=======
-    <section id="education" className="relative">
-      <div className="section-container">
-        {/* Section header */}
-        <div className="text-center mb-16">
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
           <h2 className="section-title">Education & Awards</h2>
           <p className="section-subtitle mx-auto">
             Academic foundation in electrical engineering with specialized focus areas
           </p>
-<<<<<<< HEAD
         </motion.div>
 
         <motion.div
@@ -55,13 +44,6 @@ const Education = () => {
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 160, damping: 18 }}
           >
-=======
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Education Card */}
-          <div className="glass-card p-8">
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                 <GraduationCap className="w-7 h-7 text-primary" />
@@ -103,7 +85,6 @@ const Education = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
           </motion.div>
 
           {/* Awards Card */}
@@ -113,12 +94,6 @@ const Education = () => {
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 160, damping: 18 }}
           >
-=======
-          </div>
-
-          {/* Awards Card */}
-          <div className="glass-card p-8">
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 rounded-xl bg-yellow-500/10 flex items-center justify-center">
                 <Award className="w-7 h-7 text-yellow-500" />
@@ -153,17 +128,10 @@ const Education = () => {
                 More achievements coming soon...
               </p>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </motion.div>
       </div>
     </motion.section>
-=======
-          </div>
-        </div>
-      </div>
-    </section>
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
   );
 };
 

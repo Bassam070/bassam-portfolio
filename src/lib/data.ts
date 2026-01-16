@@ -165,25 +165,6 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-<<<<<<< HEAD
-=======
-    title: "10,000 m² Facility Layout Design",
-    category: "Design/CAD",
-    description: "Designed comprehensive electrical layout for a 10,000 m² facility using CDEGS/Revit.",
-    role: "Layout Designer",
-    tools: ["CDEGS", "Revit", "AutoCAD"],
-    outcome: "Complete facility electrical design",
-    details: {
-      overview: "Large-scale facility electrical distribution design.",
-      problem: "Create an efficient and safe electrical distribution system for a new industrial facility.",
-      approach: "Used grounding analysis and 3D modeling for optimal equipment placement.",
-      results: "Delivered approved drawings meeting all safety and efficiency requirements.",
-      learnings: "Large-scale project coordination and industrial design standards.",
-    },
-  },
-  {
-    id: 8,
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
     title: "Fitness Tracker — Arduino Uno",
     category: "Embedded",
     description: "Built a health monitoring system using temperature, ECG, and pulse sensors with Arduino Uno.",
@@ -199,11 +180,7 @@ export const projects: Project[] = [
     },
   },
   {
-<<<<<<< HEAD
     id: 8,
-=======
-    id: 9,
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
     title: "Printer Availability System — Raspberry Pi",
     category: "Embedded",
     description: "Developed a ROS-based system to monitor and indicate printer usage status in real time.",
@@ -219,11 +196,7 @@ export const projects: Project[] = [
     },
   },
   {
-<<<<<<< HEAD
     id: 9,
-=======
-    id: 10,
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
     title: "Accessible Donation Bin — Multisim",
     category: "Design/CAD",
     description: "Designed a mechanical donation bin with validated electronic circuits using recycled materials.",

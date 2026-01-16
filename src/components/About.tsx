@@ -1,11 +1,7 @@
 import { Zap, Cpu, Settings, Award } from "lucide-react";
-<<<<<<< HEAD
 import { motion } from "framer-motion";
 import { personalInfo } from "@/lib/data";
 import aboutPhoto from "@/assets/ring.jpg";
-=======
-import { personalInfo } from "@/lib/data";
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 
 const highlights = [
   {
@@ -19,14 +15,6 @@ const highlights = [
     description: "Arduino, Raspberry Pi, and sensor integration",
   },
   {
-<<<<<<< HEAD
-=======
-    icon: Settings,
-    title: "Automation",
-    description: "SCADA, PLCs, and industrial control systems",
-  },
-  {
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
     icon: Award,
     title: "Design Excellence",
     description: "CAD, sustainable design, and code compliance",
@@ -34,7 +22,6 @@ const highlights = [
 ];
 
 const About = () => {
-<<<<<<< HEAD
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,19 +52,11 @@ const About = () => {
       <div className="section-container">
         {/* Section header */}
         <motion.div className="text-center mb-16" variants={fadeUp}>
-=======
-  return (
-    <section id="about" className="relative">
-      <div className="section-container">
-        {/* Section header */}
-        <div className="text-center mb-16">
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle mx-auto">
             Passionate engineer with hands-on experience in designing and implementing
             complex electrical systems
           </p>
-<<<<<<< HEAD
         </motion.div>
 
         <motion.div
@@ -139,37 +118,6 @@ const About = () => {
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 160, damping: 18 }}
-=======
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Bio */}
-          <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {personalInfo.bio}
-            </p>
-            
-            {/* Quick facts */}
-            <div className="space-y-3">
-              {personalInfo.highlights.map((highlight, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 text-foreground"
-                >
-                  <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  {highlight}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Highlight cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="glass-card p-6 group cursor-default"
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
@@ -180,21 +128,12 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">
                   {item.description}
                 </p>
-<<<<<<< HEAD
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
       </div>
     </motion.section>
-=======
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
   );
 };
 

@@ -1,15 +1,11 @@
 import { Heart, Mail, Linkedin, Github } from "lucide-react";
-<<<<<<< HEAD
 import { motion } from "framer-motion";
-=======
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
 import { personalInfo } from "@/lib/data";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-<<<<<<< HEAD
     <motion.footer
       className="border-t border-border bg-background"
       initial="hidden"
@@ -33,20 +29,12 @@ const Footer = () => {
             className="flex flex-col items-center md:items-start gap-2"
             variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}
           >
-=======
-    <footer className="border-t border-border bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo and copyright */}
-          <div className="flex flex-col items-center md:items-start gap-2">
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
             <span className="text-xl font-bold text-foreground">
               Bassam Mahdi
             </span>
             <p className="text-sm text-muted-foreground">
               © {currentYear} All rights reserved.
             </p>
-<<<<<<< HEAD
           </motion.div>
 
           {/* Made with love */}
@@ -64,19 +52,6 @@ const Footer = () => {
             className="flex items-center gap-3"
             variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}
           >
-=======
-          </div>
-
-          {/* Made with love */}
-          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Built with</span>
-            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            <span>and engineering precision</span>
-          </div>
-
-          {/* Social links */}
-          <div className="flex items-center gap-3">
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
             <a
               href={`mailto:${personalInfo.email}`}
               className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary transition-all"
@@ -102,17 +77,10 @@ const Footer = () => {
             >
               <Github className="w-5 h-5" />
             </a>
-<<<<<<< HEAD
           </motion.div>
         </motion.div>
       </div>
     </motion.footer>
-=======
-          </div>
-        </div>
-      </div>
-    </footer>
->>>>>>> 64f63babd57fe3c26cd070c14c7a55cc66de90e0
   );
 };
 
