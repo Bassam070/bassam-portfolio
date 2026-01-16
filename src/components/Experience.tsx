@@ -9,7 +9,7 @@ const Experience = () => {
       className="relative"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, margin: "-50px 0px" }}
       variants={{
         hidden: { opacity: 0 },
         visible: {

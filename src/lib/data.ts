@@ -21,16 +21,19 @@ export const personalInfo = {
 export const experiences = [
   {
     id: 1,
-    title: "Barista",
-    company: "Starbucks",
+    title: "Electrical Engineering Lead",
+    company: "University of Ottawa",
     location: "Ottawa, ON",
-    period: "May 2022 – Present",
+    period: "Sept 2024 – Apr 2025",
     description: [
-      "Delivered exceptional customer service under high-pressure environments, maintaining composure during peak hours",
-      "Trained and mentored new team members using positive reinforcement and coaching techniques",
-      "Maintained operational standards and organized daily cleaning schedules for equipment areas",
+      "Led the electrical and controls design for a solar-powered thermal energy storage (TES) capstone system using phase change materials (PCM) to improve energy efficiency and reliability",
+      "Developed the system architecture for sensing, control, and power delivery (sensors, control logic, wiring, protection), ensuring safe operation and clear subsystem interfaces",
+      "Modeled system behavior and validated design choices through simulations and calculations, supporting component sizing and expected performance under varying operating conditions",
+      "Designed and integrated the control strategy for charging/discharging cycles, including temperature monitoring and safety thresholds to protect components and users",
+      "Produced technical documentation (block diagrams, wiring/IO lists, testing plan, and risk/safety notes) and communicated progress in design reviews and presentations",
+      "Coordinated with teammates across mechanical/thermal design to align electrical requirements with the physical build and testing constraints",
     ],
-    type: "work",
+    type: "engineering",
   },
   {
     id: 2,
@@ -44,6 +47,19 @@ export const experiences = [
       "Collaborated with cross-functional teams to integrate electrical systems with mechanical and software components",
     ],
     type: "engineering",
+  },
+  {
+    id: 3,
+    title: "Barista",
+    company: "Starbucks",
+    location: "Ottawa, ON",
+    period: "May 2022 – Present",
+    description: [
+      "Delivered exceptional customer service under high-pressure environments, maintaining composure during peak hours",
+      "Trained and mentored new team members using positive reinforcement and coaching techniques",
+      "Maintained operational standards and organized daily cleaning schedules for equipment areas",
+    ],
+    type: "work",
   },
 ];
 
